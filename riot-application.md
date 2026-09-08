@@ -37,11 +37,16 @@ bans, and the player's own assigned role (including autofill) — and produces:
 - an optional AI-generated natural-language read of the draft, with an alternative-picks list, for
   players who want a deeper analysis.
 
-**Scope and behavior.** DraftPilot is strictly read-only and advisory. It does not pick, ban, accept
-queues, script inputs, automate any part of gameplay, modify game files or memory, or interact with the
-game in any way. It uses only information that is already on the player's screen during champ select,
-plus publicly available champion statistics. It provides no information that other players in the lobby
-do not also have.
+**Scope and behavior.** DraftPilot is advisory. It does not pick or ban champions, accept queues, script
+inputs, automate gameplay, or modify game files or memory. It uses only information already on the
+player's screen during champ select, plus publicly available champion statistics, and provides no
+information other players in the lobby do not also have.
+
+The only action DraftPilot performs on the client, and only when the player explicitly presses an
+"Import runes" button, is creating a rune page and (during champ select) setting summoner spells via the
+official client endpoints (`/lol-perks/v1/pages`, `/lol-champ-select/v1/session/my-selection`) — the
+same convenience feature offered by op.gg, Blitz, Mobalytics and Porofessor. It is user-initiated, never
+automatic, and does not pick, ban, or lock anything.
 
 **Distribution.** DraftPilot is being built for the Overwolf platform and will be distributed through
 the Overwolf Appstore as an overlay that is active only during champ select.
@@ -67,7 +72,11 @@ Companion app / third-party tool (champ select assistant)
 
 ## Team / company
 
-[Your name or company], [Country]. Solo developer / small team.
+Agustín Azziz, Uruguay. Solo developer.
+
+## Contact
+
+aazziz@draftpilot.gg
 
 ## Disclaimer to include on all surfaces
 
