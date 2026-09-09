@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>DraftPilot — Champ select copilot for League of Legends</title>
-<meta name="description" content="DraftPilot analyzes the League of Legends pick/ban phase in real time and tells you what to pick — based on what's on your screen and current-patch statistics.">
+<meta name="description" content="DraftPilot uses an AI to analyze the League of Legends pick/ban phase in real time and tell you what to pick — from what's on your screen and current-patch statistics.">
 <style>
   :root{
     --bg:#0A1428; --panel:#0F1D33; --panel2:#132743; --line:#223A5C;
@@ -101,8 +101,8 @@
   <section class="hero" style="border-top:0">
     <div class="kicker">League of Legends · Champ select</div>
     <h1>Your champ select <em>copilot</em></h1>
-    <p class="lead">DraftPilot reads the pick/ban phase as it happens and tells you what to pick — from your
-    champion pool and beyond — based on what's already on your screen and current-patch statistics.</p>
+    <p class="lead">DraftPilot reads the pick/ban phase as it happens and an AI tells you what to pick — from
+    your champion pool and beyond — from what's already on your screen and current-patch statistics.</p>
     <div class="cta">
       <a class="btn" href="#waitlist">Join the waitlist</a>
       <a class="btn ghost" href="#how">See how it works</a>
@@ -122,19 +122,20 @@
         <p>Your team, the enemy team, bans, and your assigned role — including autofill. No manual input.</p>
       </div>
       <div class="card">
-        <h3>Recommends your pick</h3>
-        <p>Ranks the best option from your champion pool plus the two strongest picks outside it, adjusted to the
-        enemy composition, your team's damage and engage balance, the lane matchup, and current-patch win and pick rates.</p>
+        <h3>AI recommends your pick</h3>
+        <p>An AI model reads the full draft — your pool, both team compositions, bans, damage and engage balance,
+        the lane matchup, current-patch win and pick rates — and names the pick that fits, from your pool plus the
+        strongest options outside it.</p>
       </div>
       <div class="card">
-        <h3>Explains the pick</h3>
-        <p>A short rationale, an early / mid / late game plan tailored to the enemies you're facing, and
-        ultimate-usage advice against the key threats.</p>
+        <h3>Explains it, plans the game</h3>
+        <p>A short rationale, an early / mid / late plan tailored to the exact enemies, ultimate-usage advice
+        against the key threats, and an item build and rune page from current high-elo data.</p>
       </div>
       <div class="card">
-        <h3>Optional AI coach</h3>
-        <p>Sends the current draft to an AI model for a natural-language read of the game, with its own
-        recommended pick and alternatives.</p>
+        <h3>Adapts as the draft unfolds</h3>
+        <p>Re-analyzes on every pick and ban. When you lock in, it drops the alternatives and shows only your
+        champion's build and game plan.</p>
       </div>
     </div>
 
@@ -154,9 +155,11 @@
     <h2>How it works</h2>
     <ol class="steps">
       <li>Runs as an overlay during champ select, on top of the League client.</li>
-      <li>Uses only information already visible to you in the client, plus public champion statistics.</li>
+      <li>Reads only information already visible to you in the client — allied and enemy picks, bans, your role.</li>
+      <li>Sends that draft state — champion names, roles, bans, no account or personal data — plus current-patch
+      statistics to an AI model, which produces the recommendation and the plan.</li>
       <li>It does not automate anything, modify the game, or interact with it in any way — it only reads and advises.</li>
-      <li>Set your champion pool once; the analysis adapts to every draft automatically.</li>
+      <li>Set your champion pool once; the analysis runs itself on every draft.</li>
     </ol>
     <figure class="shot">
       <img src="img/plan.png" alt="DraftPilot's pick rationale and early/mid/late game plan">
@@ -171,18 +174,18 @@
         <h3>Free</h3>
         <div class="price">no account required</div>
         <ul>
-          <li>Live draft recommendations</li>
+          <li>AI draft recommendation — a few analyses per game</li>
           <li>Current-patch win &amp; pick rates</li>
-          <li>Pick rationale and game plan</li>
+          <li>Pick rationale and a basic game plan</li>
         </ul>
       </div>
       <div class="plan pro">
         <h3>Pro</h3>
         <div class="price">optional subscription</div>
         <ul>
-          <li>Everything in Free</li>
-          <li>AI draft coach with natural-language analysis</li>
-          <li>Deeper matchup and ultimate-usage detail</li>
+          <li>Unlimited AI analysis — re-runs on every pick and ban</li>
+          <li>Full item build, rune page and skill order</li>
+          <li>Deeper matchup, ultimate-usage and win-condition detail</li>
         </ul>
       </div>
     </div>
@@ -193,13 +196,15 @@
     <h3>Is this allowed?</h3>
     <p>DraftPilot only reads information that is already on your screen in champ select, plus publicly available
     statistics. It never automates gameplay, never modifies the game, and never provides information that other
-    players don't have. It is built for the Overwolf platform and is pending approval from Riot Games.</p>
+    players don't have — it just analyzes what everyone in the lobby can already see. It is built for the Overwolf
+    platform and is pending approval from Riot Games.</p>
     <h3>Does it play the game for me?</h3>
     <p>No. It does not pick, ban, accept queues, or interact with the client. It is a read-only analysis tool.</p>
     <h3>What data leaves my computer?</h3>
-    <p>The heuristic recommendations run entirely on your machine. If you enable the AI coach, the current draft
-    state (champions, roles, bans — no personal identifiers) is sent to our service to generate the analysis.
-    See our <a href="privacy.html">Privacy Policy</a>.</p>
+    <p>To produce a recommendation, the current draft state — champion names, roles and bans, with no account
+    identifiers and no personal data — is sent to our service and forwarded to a third-party AI provider. The
+    response comes back to your client and is not stored. Nothing else leaves your machine. See our
+    <a href="privacy.html">Privacy Policy</a>.</p>
     <h3>Which regions and queues?</h3>
     <p>Ranked Solo/Duo and Flex on the live client. More detail at launch.</p>
   </section>

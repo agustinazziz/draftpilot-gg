@@ -29,19 +29,18 @@
 
   <h2>1. What the Service does</h2>
   <p>DraftPilot is an analysis tool for the League of Legends champ select (pick/ban) phase. It reads the state
-  of the draft that is already displayed in your game client and produces recommendations. It does not automate,
-  modify, or interact with the game.</p>
+  of the draft that is already displayed in your game client and produces AI-generated recommendations. It does
+  not automate, modify, or interact with the game.</p>
 
   <h2>2. Information we process</h2>
   <p><b>Draft data.</b> Champions picked and banned, assigned roles, and your configured champion pool. This is
-  read from the game client through the Overwolf platform and used in real time to generate recommendations. The
-  core (heuristic) analysis runs locally on your device.</p>
-  <p><b>AI coach (optional, only if you enable it).</b> When you request an AI analysis, the current draft state
-  (champion names, roles, bans — no account identifiers, no personal data) is sent to our backend and forwarded
-  to a third-party AI provider (currently Groq; the provider can be changed in the app settings) to generate
-  the response. We do not use this data to train
-  models, and our providers are contractually bound not to train on it. It is retained only in short-term
-  operational logs and then deleted.</p>
+  read from the game client through the Overwolf platform.</p>
+  <p><b>AI analysis.</b> To produce a recommendation, the current draft state (champion names, assigned roles,
+  bans — no account identifiers, no personal data) is sent to our backend and forwarded to a third-party AI
+  provider (currently Groq; the provider can be changed in the app settings). The provider's response is
+  returned to your client. We do not use this data to train models, and our providers are contractually bound
+  not to train on it. It is retained only in short-term operational logs and then deleted. This processing is
+  a core function of the Service, not optional.</p>
   <p><b>Account and subscription data.</b> If you create an account or subscribe to Pro, we process your email
   address and subscription status. Payment is handled by Overwolf; we do not receive or
   store your full payment card details.</p>
@@ -59,14 +58,15 @@
   </ul>
 
   <h2>4. Third parties</h2>
-  <p>We rely on: <b>Overwolf</b> (the platform the app runs on), our <b>AI provider</b> (for the optional AI
-  coach), our <b>payment processor</b>, our <b>hosting provider</b>, and an <b>error-reporting service</b>. Each
-  processes data only as needed to provide their part of the Service and under their own privacy terms.</p>
+  <p>We rely on: <b>Overwolf</b> (the platform the app runs on), our <b>AI provider</b> (generates the draft
+  recommendation), our <b>payment processor</b>, our <b>hosting provider</b>, and an <b>error-reporting
+  service</b>. Each processes data only as needed to provide their part of the Service and under their own
+  privacy terms.</p>
 
   <h2>5. Legal basis (EEA/UK users)</h2>
-  <p>We process draft data and provide recommendations to perform the contract with you (Art. 6(1)(b) GDPR). The
-  optional AI coach and diagnostics are based on your consent (Art. 6(1)(a)), which you can withdraw at any time
-  in the app settings.</p>
+  <p>We process draft data — including sending it to our AI provider — to provide the recommendation you
+  requested, i.e. to perform the contract with you (Art. 6(1)(b) GDPR). Diagnostics are based on your consent
+  (Art. 6(1)(a)), which you can withdraw at any time in the app settings.</p>
 
   <h2>6. Retention</h2>
   <p>Draft data is processed transiently and not stored on our servers except for short-term operational logs
