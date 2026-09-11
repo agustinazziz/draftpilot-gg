@@ -213,13 +213,15 @@
     <h2>Get notified at launch</h2>
     <p style="color:var(--dim);max-width:560px">DraftPilot is in development. Leave your email and we'll tell you
     when the Overwolf app is available.</p>
-    <!-- Replace action with a Formspree / Cloudflare form endpoint, or keep the mailto fallback. -->
-    <form action="https://formspree.io/f/REPLACE_ME" method="POST" style="display:flex;gap:10px;flex-wrap:wrap;margin-top:8px">
+    <!-- No backend: opens the visitor's mail client with the address pre-filled, addressed to us. -->
+    <form action="mailto:aazziz@draftpilot.gg?subject=DraftPilot%20waitlist" method="POST" enctype="text/plain"
+      style="display:flex;gap:10px;flex-wrap:wrap;margin-top:8px">
       <input type="email" name="email" required placeholder="you@example.com"
         style="flex:1;min-width:220px;background:var(--panel);border:1px solid var(--line);color:var(--txt);padding:12px 14px;border-radius:6px;font-size:15px">
       <button class="btn" type="submit">Notify me</button>
     </form>
-    <p style="color:var(--dim);font-size:13px;margin-top:10px">Or email
+    <p style="color:var(--dim);font-size:13px;margin-top:10px">This opens your email app with the message ready —
+      just hit send. Or write to us directly at
       <a href="mailto:aazziz@draftpilot.gg">aazziz@draftpilot.gg</a>.</p>
   </section>
 
